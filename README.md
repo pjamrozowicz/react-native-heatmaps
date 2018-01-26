@@ -53,6 +53,9 @@ In your `ios/Podfile` add line below and don't forget to run `pod install`:
 pod 'Google-Maps-iOS-Utils', :git => 'https://github.com/pjamrozowicz/google-maps-ios-utils.git'
 ```
 
+Remember to use `PROVIDER_GOOGLE` as `MapView` provider (check the example below). 
+For some reason, weight based heatmap is not displayed correctly when testing on simulator.
+
 ## Component API
 Prop | Type | Default | Note 
 ------------ | ------------- | ------------- | -------------
@@ -74,7 +77,7 @@ import {
   StyleSheet,
   View
 } from 'react-native';
-import MapView from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 export default class App extends Component<{}> {
   render() {
@@ -121,6 +124,7 @@ export default class App extends Component<{}> {
     return (
       <View style ={styles.container}>
         <MapView
+	  provider={PROVIDER_GOOGLE}
           style={styles.map}
           region={{
             latitude: 50.0614300,
