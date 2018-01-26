@@ -1,6 +1,6 @@
 # react-native-heatmaps
 
-This is an instruction on how to use my fork of [react-native-maps](https://github.com/react-community/react-native-maps) which adds possibility to draw heatmaps.
+This is an instruction on how to use my fork of [react-native-maps](https://github.com/react-community/react-native-maps) which adds possibility to draw heatmaps (**but only for Google Maps**).
 
 There are 2 different types of heatmaps implemented - density based and weight based. The first one is drawn with Google algorithm from their Maps Utils ([Android](https://developers.google.com/maps/documentation/android-api/utility/heatmap) and [iOS](https://developers.google.com/maps/documentation/ios-sdk/utility/heatmap)). The second one is based on my own algorithm.
 
@@ -21,7 +21,7 @@ And then continue with installation for each platform:
 
 ### Android
 
-In your `android/build.gradle` add code:
+In your `android/build.gradle` add:
 
 ```
 flatDir {
@@ -47,7 +47,11 @@ allprojects {
 ```
 
 ### iOS
-Soon...
+In your `ios/Podfile` add line below and don't forget to run `pod install`:
+
+```
+pod 'Google-Maps-iOS-Utils', :git => 'https://github.com/pjamrozowicz/google-maps-ios-utils.git'
+```
 
 ## Component API
 Prop | Type | Default | Note 
