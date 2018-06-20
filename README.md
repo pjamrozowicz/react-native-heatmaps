@@ -13,7 +13,7 @@ Screens below are example heatmaps for the same dataset but drawn with these two
 
 
 ## Installation
-Complete installation instruction for [react-native-maps](https://github.com/react-community/react-native-maps/blob/master/docs/installation.md) with small change - download `react-native-maps` from:
+Complete installation instruction for [react-native-maps](https://github.com/pjamrozowicz/react-native-maps/blob/master/docs/installation.md) with small change - download `react-native-maps` from:
 ```
 npm install git+https://github.com/pjamrozowicz/react-native-maps.git --save
 ```
